@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useState }  from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Navbar from './components/Navbar/Navbar'
+import Sidebar from './components/Sidebar/Sidebar'
 
 const App = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggle = () => {
+      setIsOpen(!isOpen)
+  }
+
   return (
-    <div>
-      <h1>Domicilios Test</h1>
-    </div>
+    <Router>
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Navbar toggle={toggle} />
+    </Router>
   );
 }
 
