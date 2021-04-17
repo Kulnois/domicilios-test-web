@@ -12,7 +12,7 @@ const RegisterView = props => {
                     <input type="password" placeholder="Confirmar Contraseña" />
                     <hr className="solid" />
                     <button className="btn-link">Iniciar sesión</button>
-                    <p>¿Nuevo cliente? <a href="">Crear cuenta nueva</a> </p>
+                    <p>¿Tienes una cuenta? <a href="/register">Regístrate </a> </p>
                 </form>
             </div>
         </div>
