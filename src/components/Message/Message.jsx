@@ -1,10 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-const Message = ({ message }) => {
+const Message = ({ children }) => {
+
+    const [close, setClose] = useState(false)
+
     return (
-        <div class="alert">
-            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-            {message}
+        <div className="alert" style={{ display: close ? 'none'  : 'inline'}}>
+            <span className="closebtn" onClick={() => setClose(true)} >&times;</span>
+            {children}
         </div>
     )
 }
