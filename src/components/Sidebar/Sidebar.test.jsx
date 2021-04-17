@@ -3,7 +3,7 @@ import { screen, render } from '@testing-library/react'
 
 import Sidebar from './Sidebar'
 
-beforeEach(() => render(<Sidebar />))
+beforeEach(() => render(<Sidebar isOpen={true} />))
 
 describe("Sidebar", () => {
     it("must display a title", () => {

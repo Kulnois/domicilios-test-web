@@ -275,9 +275,9 @@ aside {
 
 
 /*------------------------------------*\
-    #SECTION-COMENT
+    #SECTION-COMMENT
 \*------------------------------------*/
-.coment {
+.comment {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr;
@@ -285,22 +285,22 @@ aside {
     grid-row-gap: 0px;
 }
 
-.coment img {
+.comment img {
     width: 60px;
     border-radius: 50%;
     padding: 10px;
 }
 
-.coment h1 {
+.comment h1 {
     color: #30ca6f;
     margin: 0.2em 0;
 }
 
-.coment span {
+.comment span {
     color: #bfbfbf;
 }
 
-.coment button {
+.comment button {
     color: #30ca6f;
     background-color: Transparent;
     background-repeat:no-repeat;
@@ -347,7 +347,7 @@ aside {
     flex: 1;
 }
 
-.number-coments {    
+.number-comments {    
     align-items: flex-end;
     padding-right: 20px;
     color: #a9a9a9;
@@ -366,7 +366,7 @@ aside {
     font-weight: bold;
 }
 
-.list-coments{
+.list-comments{
     display: flex;
     flex-direction: column;
     background: #f6f6f4;
@@ -381,7 +381,7 @@ aside {
     margin: 5px 0px;
 }
 
-.list-coments input {
+.list-comments input {
     margin: 20px;
     padding: 25px 40px;
     border: 1px solid #e8e8e8;
@@ -390,7 +390,7 @@ aside {
     width: auto;
 }
 
-.list-coments input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.list-comments input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #a9a9a9;
     opacity: 1; /* Firefox */
 }
