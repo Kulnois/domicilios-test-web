@@ -10,7 +10,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             <div className="sidebar-wrapper">
                     {userInfo ? (
                         <ul className="sidebar-menu">
-                            <a href="/" className="sidebar-link" onClick={toggle}>Hola, Juan</a>
+                            <a href="/profile" className="sidebar-link" onClick={toggle}>Hola, Juan</a>
                             <div className="side-btn-wrap">
                                 <a href="/login" className="sidebar-btn" onClick={toggle}>Cerrar sesión</a>
                             </div>
@@ -19,7 +19,7 @@ const Sidebar = ({ isOpen, toggle }) => {
                         <ul className="sidebar-menu">
                             <a href="/" className="sidebar-link" onClick={toggle}>Domicilios Test</a>
                             <div className="side-btn-wrap">
-                                <a href="/signin" className="sidebar-btn" onClick={toggle}>Iniciar sesión</a>
+                                <a href="/login" className="sidebar-btn" onClick={toggle}>Iniciar sesión</a>
                             </div>
                         </ul>
                     )}  
