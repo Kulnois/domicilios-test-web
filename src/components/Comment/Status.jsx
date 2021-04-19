@@ -45,8 +45,8 @@ const Status = ({ status }) => {
     }
     
     useEffect(() => {
-        if (status) {
-            const reactionsUser = status?.reactions.find(reaction => reaction?.user === userInfo._id)
+        if (status && userInfo) {
+            const reactionsUser = status?.reactions.find(reaction => reaction?.user === userInfo?._id)
             if (reactionsUser) setReactionStatusByUser(reactionsUser)
         }
     }, [status, userInfo])
