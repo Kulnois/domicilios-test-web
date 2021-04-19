@@ -13,7 +13,7 @@ const Status = ({ status }) => {
     const [message, setMessage] = useState(null)
     const [loadData, setLoadData] = useState(false)
     const [reactionStatusByUser, setReactionStatusByUser] = useState(null)
-    const [numberComment, setNumberComment] = useState(0)
+    const [numberComment, setNumberComment] = useState(status?.comments.length ? status?.comments.length : 0 )
     const [removedStatus, setRemovedStatus] = useState(false)
 
     const userLogin = useSelector(state => state.userLogin)
