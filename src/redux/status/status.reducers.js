@@ -9,7 +9,7 @@ export const statusListReducer = (state = { statuses: [] }, action) => {
             return { loading: false, statuses: action.payload }
 
         case StatusActionTypes.STATUS_LIST_FAIL:
-            return { loading: false, error: action.payload }
+            return { loading: false, error: action.payload, statuses: [] }
         default:
             return state        
     }

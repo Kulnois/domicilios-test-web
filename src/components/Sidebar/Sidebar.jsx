@@ -1,7 +1,16 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { logout } from '../../redux/user/user.actions'
 
 const Sidebar = ({ isOpen, toggle }) => {
-    const userInfo = null
+    const dispatch = useDispatch()
+    const userLogin = useSelector(state => state.userLogin)
+    const { userInfo } = userLogin
+
+    const logoutHandler = () => {
+        dispatch(logout())
+        toggle()
+    }
     return (
         <aside onClick={toggle} style={{ opacity: isOpen ? '100%' : '0', top: isOpen ? '0' : '-100%' }} >
             <div className="icon" onClick={toggle}>
@@ -10,9 +19,9 @@ const Sidebar = ({ isOpen, toggle }) => {
             <div className="sidebar-wrapper">
                     {userInfo ? (
                         <ul className="sidebar-menu">
-                            <a href="/profile" className="sidebar-link" onClick={toggle}>Hola, Juan</a>
+                            <a href="/profile" className="sidebar-link" onClick={toggle}>Hola, {userInfo.name}</a>
                             <div className="side-btn-wrap">
-                                <a href="/login" className="sidebar-btn" onClick={toggle}>Cerrar sesión</a>
+                                <a href="/login" className="sidebar-btn" onClick={logoutHandler}>Cerrar sesión</a>
                             </div>
                         </ul>
                     ) : (

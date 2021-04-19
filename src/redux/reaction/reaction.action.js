@@ -31,7 +31,7 @@ export const deleteReaction = (id) => async (dispatch, getState) => {
     }
 }
 
-export const createReaction = () => async (dispatch, getState) => {
+export const createReaction = (statusId) => async (dispatch, getState) => {
     try {
         dispatch({
             type: ReactionActionTypes.REACTION_CREATE_REQUEST,
@@ -44,7 +44,7 @@ export const createReaction = () => async (dispatch, getState) => {
                 Authorization: `Bearer ${userInfo.token}`
             }
         }
-        const { data } = await axios.post(`/api/reactions`, {}, config)
+        const { data } = await axios.post(`/api/reactions`, {statusId}, config)
 
         dispatch({
             type: ReactionActionTypes.REACTION_CREATE_SUCCESS,

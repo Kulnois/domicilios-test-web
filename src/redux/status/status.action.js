@@ -75,7 +75,7 @@ export const deleteStatus = (id) => async (dispatch, getState) => {
     }
 }
 
-export const createStatus = () => async (dispatch, getState) => {
+export const createStatus = (content) => async (dispatch, getState) => {
     try {
         dispatch({
             type: StatusActionTypes.STATUS_CREATE_REQUEST,
@@ -88,7 +88,7 @@ export const createStatus = () => async (dispatch, getState) => {
                 Authorization: `Bearer ${userInfo.token}`
             }
         }
-        const { data } = await axios.post(`/api/statuses`, {}, config)
+        const { data } = await axios.post(`/api/statuses`, {content}, config)
 
         dispatch({
             type: StatusActionTypes.STATUS_CREATE_SUCCESS,

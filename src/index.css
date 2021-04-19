@@ -1,11 +1,13 @@
 /*------------------------------------*\
     #SECTION-GLOBAL
 \*------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 body {
     margin: 0;
     padding: 0;
     background:#f4f4f4;
+    font-family: 'Lato', sans-serif;
 }
 
 input {
@@ -332,7 +334,7 @@ aside {
 
 .reaction {
     margin-left: 10px;
-    background: #7e1b58;
+    background: #488cf6;
     width: 22px;
     height: 22px;
     border-radius: 50%;
@@ -351,6 +353,7 @@ aside {
     align-items: flex-end;
     padding-right: 20px;
     color: #a9a9a9;
+    cursor: pointer;
 }
 .reactions{
     flex-direction: row;
@@ -393,6 +396,10 @@ aside {
 .list-comments input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #a9a9a9;
     opacity: 1; /* Firefox */
+}
+
+.not-reaction {
+    margin-left: 10px;
 }
 
 /*------------------------------------*\
@@ -527,5 +534,11 @@ form .btn-link {
 @media screen and (max-width: 680px) {
     form {
         width: auto;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .logout {
+        display: none;
     }
 }

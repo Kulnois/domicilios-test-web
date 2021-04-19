@@ -75,7 +75,7 @@ export const deleteComment = (id) => async (dispatch, getState) => {
     }
 }
 
-export const createComment = () => async (dispatch, getState) => {
+export const createComment = (comment) => async (dispatch, getState) => {
     try {
         dispatch({
             type: CommentActionTypes.COMMENT_CREATE_REQUEST,
@@ -88,7 +88,7 @@ export const createComment = () => async (dispatch, getState) => {
                 Authorization: `Bearer ${userInfo.token}`
             }
         }
-        const { data } = await axios.post(`/api/comments`, {}, config)
+        const { data } = await axios.post(`/api/comments`, comment, config)
 
         dispatch({
             type: CommentActionTypes.COMMENT_CREATE_SUCCESS,
